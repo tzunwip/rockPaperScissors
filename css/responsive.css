@@ -1,0 +1,53 @@
+@media screen and (orientation: landscape) {
+  html {
+    font-size: max(24px, 3vw);
+  }
+
+  .game {
+    height: 13em;
+    width: 30em;
+    grid-template-rows: 1em 3em 3em auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "score historytitle"
+      "action historycontent"
+      "comment historycontent"
+      "playerselection historycontent";
+  }
+
+  .score {
+    align-self: end;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-height: 650px) {
+  body {
+    min-height: 22em;
+  }
+
+  .form {
+    min-height: 22em;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 650px) {
+  body {
+    min-width: 30em;
+  }
+
+  .form {
+    min-width: 30em;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  /* horizontal separator bar */
+  body:before {
+    content: "";
+    position: relative;
+    background: black;
+    top: 13.6em;
+    width: 11em;
+    height: 0.1em;
+  }
+}

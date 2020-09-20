@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Play Rock Paper Scissors!</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="game">
+    <div class="score">
+      <div class="score__playername">You</div>
+      <div class="score__tally">0 : 0</div>
+      <div class="score__computername">Bob</div>
+    </div>
+    <div class="action">
+      <div class="action__player">
+        <i id="action__player" class="fa fa-hand-rock-o fa-3x fa-flip-horizontal" aria-hidden="true"></i>
+      </div>
+      <div class="action__round">Vs</div>
+      <div class="action__computer">
+        <i id="action__computer" class="fa fa-hand-rock-o fa-3x" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="commentary__box">Round 1<br>First to 5 points wins!<br>Pick your move:</div>
+    <div class="player__selection">
+      <div class="btn__rock btn">
+        <i class="fa fa-hand-rock-o fa-3x fa-flip-horizontal" aria-hidden="true"></i>
+      </div>
+      <div class="btn__paper btn">
+        <i class="fa fa-hand-paper-o fa-3x fa-flip-horizontal" aria-hidden="true"></i>
+      </div>
+      <div class="btn__scissors btn">
+        <i class="fa fa-hand-scissors-o fa-3x fa-flip-horizontal" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="history__title">Scorecard</div>
+    <div class="history__content"></div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
