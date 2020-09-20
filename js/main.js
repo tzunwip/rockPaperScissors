@@ -126,7 +126,7 @@ function startForm() {
     formTitle.innerHTML = "<i class=\"fa fa-hand-rock-o fa-3x fa-flip-horizontal\" aria-hidden=\"true\"></i><i class=\"fa fa-hand-paper-o fa-3x fa-flip-horizontal\" style=\"margin-right:0.1em\" aria-hidden=\"true\"></i><i class=\"fa fa-hand-scissors-o fa-3x fa-flip-horizontal\" aria-hidden=\"true\"></i>";
 
     roundLabel.setAttribute("class", "form__roundLabel");
-    roundLabel.textContent = "Choose the winning score"
+    roundLabel.textContent = "Enter the winning score"
 
     roundInput.setAttribute("class", "form__roundInput");
     roundInput.setAttribute("type", "number");
