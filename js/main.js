@@ -87,9 +87,9 @@ function appendHistoryEntry() {
     if (playerScore >= maxScore) {
         commentaryBox.innerHTML = `Well done you beat Bob!<br>Click any button to play again`;
     } else if (computerScore >= maxScore) {
-        commentaryBox.innerHTML = `Bob beat you...<br>Click any button to play again`;
+        commentaryBox.innerHTML = `Bob beat you...<br><br>Click any button to try again`;
     } else if (lastRoundObj.playerResult === "win") {
-        commentaryBox.innerHTML = "Good job, you won!<br><br>Pick your next move:";
+        commentaryBox.innerHTML = "You won this round!<br><br>Pick your next move:";
     } else if (lastRoundObj.playerResult === "lose") {
         commentaryBox.innerHTML = "You got rekt...<br><br>Try again:";
     } else if (lastRoundObj.playerResult === "draw") {
@@ -109,7 +109,6 @@ function resetGame() {
     scoreTally.textContent = "0 : 0";
     playerIcon.setAttribute("class", "fa fa-hand-rock-o fa-3x fa-flip-horizontal");
     computerIcon.setAttribute("class", "fa fa-hand-rock-o fa-3x");
-    commentaryBox.innerHTML = "Round 1<br>First to 5 points wins!<br>Pick your move:";
     historyBox.textContent = "";
 }
 
@@ -127,7 +126,7 @@ function startForm() {
     formTitle.innerHTML = "<i class=\"fa fa-hand-rock-o fa-3x fa-flip-horizontal\" aria-hidden=\"true\"></i><i class=\"fa fa-hand-paper-o fa-3x fa-flip-horizontal\" style=\"margin-right:0.1em\" aria-hidden=\"true\"></i><i class=\"fa fa-hand-scissors-o fa-3x fa-flip-horizontal\" aria-hidden=\"true\"></i>";
 
     roundLabel.setAttribute("class", "form__roundLabel");
-    roundLabel.textContent = "Decide the winning score"
+    roundLabel.textContent = "Choose the winning score"
 
     roundInput.setAttribute("class", "form__roundInput");
     roundInput.setAttribute("type", "number");
@@ -150,6 +149,7 @@ function startForm() {
     formBtn.addEventListener("click", () => {
         if (Number.parseInt(formRoundInput.value) > 0) {
             maxScore = parseInt(formRoundInput.value);
+            commentaryBox.innerHTML = `First to ${maxScore} wins<br><br>Pick your first move:`;
 
             // hides start page
             body.removeChild(form);
