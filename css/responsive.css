@@ -1,6 +1,6 @@
 @media screen and (orientation: landscape) {
   html {
-    font-size: max(24px, 3vw);
+    font-size: max(12px, 3vw);
   }
 
   .game {

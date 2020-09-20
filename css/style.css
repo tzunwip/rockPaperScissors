@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
 
   /* font will not be smaller than 24px */
-  font-size: max(24px, 3vh);
+  font-size: max(12px, 3vh);
   text-align: center;
 }
 
@@ -183,7 +183,7 @@ body {
 
 .form__submit {
   width: 5em;
-  height: 1.5em;
+  height: auto;
   font-size: inherit;
   background-color: goldenrod;
   border: 0.1em solid goldenrod;
