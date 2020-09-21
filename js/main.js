@@ -133,6 +133,20 @@ function startForm() {
 
     submitBtn.setAttribute("class", "form__submit");
     submitBtn.textContent = "Let\'s Play";
+    // form submit button listener
+    submitBtn.addEventListener("click", () => {
+        if (Number.parseInt(roundInput.value) > 0) {
+            maxScore = parseInt(roundInput.value);
+            commentaryBox.innerHTML = `First to ${maxScore} wins<br><br>Pick your first move:`;
+
+            // hides start page
+            body.removeChild(formContainer);
+            console.log(roundInput.value);
+        } else {
+            alert("Please enter a number");
+            console.log("error");
+        }
+    });
 
     formContainer.appendChild(formTitle);
     formContainer.appendChild(roundLabel);
@@ -140,25 +154,7 @@ function startForm() {
     formContainer.appendChild(submitBtn);
     body.appendChild(formContainer);
 
-    // form DOM definitions
-    const form = document.querySelector(".form");
-    const formRoundInput = document.querySelector(".form__roundInput");
-    const formBtn = document.querySelector(".form__submit");
 
-    // form submit button listener
-    formBtn.addEventListener("click", () => {
-        if (Number.parseInt(formRoundInput.value) > 0) {
-            maxScore = parseInt(formRoundInput.value);
-            commentaryBox.innerHTML = `First to ${maxScore} wins<br><br>Pick your first move:`;
-
-            // hides start page
-            body.removeChild(form);
-            console.log(formRoundInput.value);
-        } else {
-            alert("Please enter a number");
-            console.log("error");
-        }
-    });
 }
 
 // game DOM definitions
