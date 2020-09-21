@@ -85,7 +85,7 @@ function appendHistoryEntry() {
 
     // update commentary box according to result
     if (playerScore >= maxScore) {
-        commentaryBox.innerHTML = `Well done you beat Bob!<br>Click any button to play again`;
+        commentaryBox.innerHTML = `Well done you beat Bob!<br><br>Click any button to play again`;
     } else if (computerScore >= maxScore) {
         commentaryBox.innerHTML = `Bob beat you...<br><br>Click any button to try again`;
     } else if (lastRoundObj.playerResult === "win") {
